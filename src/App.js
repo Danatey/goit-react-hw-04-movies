@@ -21,23 +21,23 @@ function App() {
     <>
       <Appbar />
       <Switch>
-        <Route path="/" exact>
+        <Route path="./" exact>
           <HomePage />
         </Route>
 
-        <Route path="/movies" exact>
+        <Route path="./movies" exact>
           <MoviesPage />
         </Route>
 
-        <Route path="/movies/:movieId" exact>
+        <Route path="./movies/:movieId" exact>
           <MovieDetailsPage />
         </Route>
 
-        <Route path="/movies/:movieId/cast">
+        <Route path="./movies/:movieId/cast">
           <Cast />
         </Route>
 
-        <Route path="/movies/:movieId/reviews">
+        <Route path="./movies/:movieId/reviews">
           <Reviews />
         </Route>
 
