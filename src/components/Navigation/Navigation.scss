@@ -1,0 +1,13 @@
+.link {
+  font-size: 18px;
+  text-decoration: none;
+  color: black;
+
+  &:not(:last-child) {
+    margin-right: 15px;
+  }
+}
+
+.activeLink {
+  color: tomato;
+}
