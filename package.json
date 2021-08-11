@@ -15,10 +15,10 @@
     "react-scripts": "4.0.3",
     "web-vitals": "^1.1.2"
   },
-  "homepage": "https://danatey.github.io/goit-react-hw-04-movies/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "build:lambda": "netlify-lambda build src/lambda",
     "predeploy": "npm run build",
     "deploy": "netlify deploy -p",
     "test": "react-scripts test",
