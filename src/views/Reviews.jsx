@@ -15,14 +15,14 @@ const Reviews = () => {
     }, [movieId]);
 
     return <ul>
-        {review ? (
+        {review.length>0 ? (
             review.map(({ author, content }) => (
             <li key={author}>
                 <h3>{author}</h3>
                 <p>{content}</p>
-                </li>
+            </li>
             ) 
-        )) : (<p>We don't have any reviews for this movie.</p>)}
+        )) : (<li><p>We don't have any reviews for this movie.</p></li>)}
     </ul>
 }
 

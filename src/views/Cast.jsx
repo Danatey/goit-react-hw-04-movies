@@ -16,7 +16,7 @@ const Cast = () => {
     return <ul>
         {cast.map(({ profile_path, name, character}) => (
             <li key={name}>
-                <img src={'https://image.tmdb.org/t/p/w200'+profile_path} alt={name} />
+                <img src={profile_path !==null ? ('https://image.tmdb.org/t/p/w200' + profile_path) : ('../image/logo192.png')} alt={name} />
                 <p>{name}</p>
                 <p><span>Character:</span>{character}</p>
             </li>
@@ -24,3 +24,4 @@ const Cast = () => {
     </ul>
 }
 export default Cast;
+

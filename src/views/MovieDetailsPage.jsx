@@ -39,7 +39,7 @@ const MovieDetailsPage = () =>{
                     <button type="button" className='go-back-button' onClick={onGoBack}>&#8678; Go Back</button>
                     <div className='movie-container'>
                         <div className='movie-image-container'>
-                            <img src={'https://image.tmdb.org/t/p/w400'+movie.img} alt={movie.name} />
+                            <img src={movie.img !==null ? ('https://image.tmdb.org/t/p/w400'+movie.img) : ('../image/logo512.png')} alt={movie.name} />
                         </div>
                         <div>
                             <h2 className='movie-name'>{movie.name}</h2>
@@ -56,14 +56,18 @@ const MovieDetailsPage = () =>{
             
                     <nav>
                         <NavLink
-                            to={`${url}/cast`}
+                            to={{pathname: `${url}/cast`,
+                                    state: { from: location?.state?.from },
+                                }}
                             className='information-link'
                         >
                             Cast
                         </NavLink>
 
                         <NavLink
-                            to={`${url}/reviews`}
+                            to={{pathname: `${url}/reviews`,
+                                    state: { from: location?.state?.from },
+                                }}
                             className='information-link'
                         >
                             Reviews
